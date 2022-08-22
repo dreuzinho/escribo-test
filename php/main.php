@@ -4,16 +4,15 @@ function sumAll($val) {
 
     $result = 0;
 
-    if(!is_integer($val)){
-        echo "{$val} não é um número inteiro";
-    }
-
     for($i = 0; $i < $val; $i++){
         if(!($i % 3) || !($i % 5)){
             $result += $i;
         }
     }
-    echo $result;
+    ?> <b><?php echo $result; ?></b> <?php
 }
 
-sumAll(9);
+$value = (int)$_GET["form"];
+sumAll($value);
+
+?>
